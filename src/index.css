@@ -1,0 +1,21 @@
+:root {
+	--color-primary: #001e6c;
+	--color-secondary: #035397;
+	--color-grey: #f2f2f2;
+	--color-grey-2: #c2c2c2;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* global reset */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}

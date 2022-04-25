@@ -1,0 +1,147 @@
+.table__container {
+	margin: 1rem auto;
+	border-collapse: collapse !important;
+	border-radius: 0.3rem !important;
+	overflow: hidden;
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba($color: #000000, $alpha: 0.3);
+
+	thead {
+		background-color: var(--color-grey);
+		text-align: left;
+		color: var(--color-primary);
+	}
+
+	tr {
+		display: grid;
+		grid-template-columns: 12rem 15rem 22rem 8rem 15rem;
+
+		&:not(:last-child) {
+			border-bottom: solid 1px rgba($color: #000000, $alpha: 0.1);
+		}
+	}
+
+	th,
+	td {
+		margin: 0;
+		padding: 1rem;
+		color: var(--color-secondary);
+	}
+	th {
+		border-spacing: 0 px;
+		padding: 0 1rem;
+		margin: 1rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:not(:last-child) {
+			border-right: solid 2px rgba($color: #000000, $alpha: 0.08);
+		}
+	}
+}
+
+.table__nodata {
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sort__ {
+	&container {
+		display: inline-flex;
+		flex-direction: column;
+		row-gap: 3px;
+	}
+	&icon {
+		line-height: 0.7rem;
+		font-size: 0.8rem;
+		opacity: 0.3;
+
+		&-active {
+			opacity: 1;
+		}
+	}
+}
+
+.form {
+	&__input {
+		display: inline-flex;
+		flex-direction: column;
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+
+	&__label {
+		display: block;
+	}
+
+	&__selector,
+	&__text-input,
+	&__button {
+		display: block;
+		border: solid 2px var(--color-grey-2) !important;
+		font-size: 1rem !important;
+		border-radius: 5px;
+		padding: 0.2rem 0.8rem;
+		width: 10rem;
+		background-color: white;
+	}
+
+	&__text-input {
+		width: 15rem;
+	}
+
+	&__group {
+		display: flex;
+	}
+	&__button {
+		align-self: flex-end;
+		width: auto;
+		background-color: white;
+		border: solid 2px var(--color-primary) !important;
+		cursor: pointer;
+
+		&:hover,
+		&:active {
+			color: white;
+			background-color: var(--color-primary);
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	&__btn {
+		font-size: 1rem;
+		padding: 0.2rem 0.5rem;
+		border: none;
+		cursor: pointer;
+		background-color: white;
+
+		&-num {
+			width: 2rem;
+			border-radius: 5px;
+			border: solid 1px var(--color-primary);
+			margin: 0 0.2rem;
+		}
+
+		&-active {
+			background-color: var(--color-primary);
+			color: white;
+		}
+
+		&:active,
+		&:hover {
+			background-color: var(--color-primary);
+			color: white;
+		}
+
+		&:disabled {
+			background-color: white;
+			color: var(--color-grey-2);
+			cursor: default;
+		}
+	}
+}
